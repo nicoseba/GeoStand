@@ -38,4 +38,5 @@ namespace GeoStand.Clases
         public DateTime RegistDate { get => registDate; set => registDate = value; }
         public DateTime ConfirmDate { get => confirmDate; set => confirmDate = value; }
     }
+
 }
