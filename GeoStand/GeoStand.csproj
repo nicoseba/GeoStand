@@ -67,14 +67,32 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="home.aspx" />
+    <Content Include="login.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Clases\Comment.cs" />
-    <Compile Include="Clases\Multimedia.cs" />
-    <Compile Include="Clases\Product.cs" />
-    <Compile Include="Clases\Publication.cs" />
-    <Compile Include="Clases\User.cs" />
+    <Compile Include="Class\Comment.cs" />
+    <Compile Include="Controller\LoginController.cs" />
+    <Compile Include="home.aspx.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="home.aspx.designer.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Class\Multimedia.cs" />
+    <Compile Include="Class\Product.cs" />
+    <Compile Include="Class\Publication.cs" />
+    <Compile Include="Class\User.cs" />
+    <Compile Include="Controller\UserController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -86,6 +104,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

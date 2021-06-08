@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace GeoStand.Clases
+namespace GeoStand.Class
 {
     public class User
     {
@@ -19,13 +19,18 @@ namespace GeoStand.Clases
         {
         }
 
-        public User(int id, string username, string name, string pass, string mail, DateTime registDate, DateTime confirmDate)
+        public User(int id, string username, string name, string pass, string mail)
         {
             this.id = id;
             this.username = username;
             this.name = name;
             this.pass = pass;
             this.mail = mail;
+            this.registDate = new DateTime();
+        }
+
+        public User(int id, string username, string name, string pass, string mail, DateTime registDate, DateTime confirmDate) : this(id, username, name, pass, mail)
+        {
             this.registDate = registDate;
             this.confirmDate = confirmDate;
         }
