@@ -72,7 +72,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class\Admin.cs" />
+    <Compile Include="Class\Chat.cs" />
+    <Compile Include="Class\ChatHasUser.cs" />
     <Compile Include="Class\Comment.cs" />
+    <Compile Include="Class\ExchangeMode.cs" />
+    <Compile Include="Class\Message.cs" />
+    <Compile Include="Class\Status.cs" />
     <Compile Include="Controller\LoginController.cs" />
     <Compile Include="home.aspx.cs">
       <DependentUpon>home.aspx</DependentUpon>
