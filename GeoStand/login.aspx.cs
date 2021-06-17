@@ -21,6 +21,11 @@ namespace GeoStand.Class
                 LblMessage.Text = Session["Error"].ToString();
                 Session["Error"] = null;
             }
+
+            if (Session["User"] != null)
+                {
+                Response.Redirect("home.aspx");
+            }
         }
 
         protected void BtnLogin_Click(object sender, EventArgs e)
