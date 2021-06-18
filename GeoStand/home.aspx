@@ -10,7 +10,8 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <asp:Label ID="Label1" runat="server" Text="Pudiste ingresar de pana"></asp:Label>
+            <asp:Label ID="Label1" runat="server" Text="¡Pudiste ingresar de pana! "></asp:Label>
+            <asp:LinkButton ID="LinkSrc" runat="server" OnClick="LinkSrc_Click">Ahora busca algo</asp:LinkButton>
         </div>
     </form>
 </body>
