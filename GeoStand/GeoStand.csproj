@@ -69,10 +69,8 @@
   <ItemGroup>
     <Content Include="home.aspx" />
     <Content Include="login.aspx" />
-
-
     <Content Include="signin.aspx" />
-
+    <Content Include="Search.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -84,11 +82,8 @@
     <Compile Include="Class\Message.cs" />
     <Compile Include="Class\Status.cs" />
     <Compile Include="Controller\LoginController.cs" />
-
     <Compile Include="Controller\SearchController.cs" />
-
     <Compile Include="Controller\SigninController.cs" />
-
     <Compile Include="home.aspx.cs">
       <DependentUpon>home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -115,8 +110,7 @@
     </Compile>
     <Compile Include="Search.aspx.designer.cs">
       <DependentUpon>Search.aspx</DependentUpon>
-    </Compile>
-		
+    </Compile>		
     <Compile Include="signin.aspx.cs">
       <DependentUpon>signin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
