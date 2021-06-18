@@ -11,7 +11,7 @@ namespace GeoStand
 {
 
 
-    public partial class home
+    public partial class Search
     {
 
         /// <summary>
@@ -24,55 +24,66 @@ namespace GeoStand
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// Control LinkButton1.
+        /// Control TxtSrc.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-
-
-        /// <summary>
-        /// Control LinkSrc.
-
-        protected global::System.Web.UI.WebControls.LinkButton LinkButton1;
+        protected global::System.Web.UI.WebControls.TextBox TxtSrc;
 
         /// <summary>
-        /// Control LnkLogin.
+        /// Control SrcButton.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-
-        protected global::System.Web.UI.WebControls.LinkButton LinkSrc;
-        protected global::System.Web.UI.WebControls.LinkButton LnkLogin;
+        protected global::System.Web.UI.WebControls.Button SrcButton;
 
         /// <summary>
-        /// Control LnkSignin.
+        /// Control Lbmsj.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LnkSignin;
+        protected global::System.Web.UI.WebControls.Label Lbmsj;
 
         /// <summary>
-        /// Control LnkSession.
+        /// Control Panel1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LnkSession;
+        protected global::System.Web.UI.WebControls.Panel Panel1;
 
         /// <summary>
-        /// Control LblMsg.
+        /// Control LbUser.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblMsg;
+        protected global::System.Web.UI.WebControls.Label LbUser;
+
+        /// <summary>
+        /// Control LbUsername.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LbUsername;
+
+        /// <summary>
+        /// Control LbEmail.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LbEmail;
     }
 }

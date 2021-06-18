@@ -16,6 +16,9 @@
     <form id="form1" runat="server">
     <nav>
         <div>
+
+            <asp:LinkButton ID="LinkSrc" runat="server" OnClick="LinkSrc_Click">Ahora busca algo</asp:LinkButton>
+
             <h3 class="auto-style1">GeoStand</h3>
         </div>
         <div>
