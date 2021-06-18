@@ -46,6 +46,31 @@ namespace GeoStand.Controller
             return listUser;
         }
 
+        public static string editUser(int _id, string mail, string name,  int R)
+        {
+
+            try
+            {
+                User u = findUser(_id);
+                if (u != null)
+                {
+                    u.Role = new Role(R);
+                    u.Username = name;
+                    u.Mail = mail;
+
+                    return "Usuario modificado.";
+                }
+                else
+                {
+                    return "Usuario no encontrado.";
+                }
+            }
+            catch (Exception e)
+            {
+                return "Error: " + e;
+            }
+        }
+
         public static void fillUser()
         {
             if (listUser.Count == 0)

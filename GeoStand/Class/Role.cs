@@ -9,8 +9,8 @@ namespace GeoStand.Class
     {
         private int id;
         private string roleName;
-        public static int USER_ROLE = 0;
-        public static int ADMIN_ROLE = 1;
+        public static int USER_ROLE = 1;
+        public static int ADMIN_ROLE = 2;
 
         public Role()
         {
@@ -21,13 +21,17 @@ namespace GeoStand.Class
         {
             switch (id)
             { 
-                case 0:
+                case 1:
                     this.id = id;
                     this.roleName = "Usuario";
                     break;
-                case 1:
+                case 2:
                     this.id = id;
                     this.roleName = "Administrador";
+                    break;
+                default:
+                    this.id = 0;
+                    this.roleName = "";
                     break;
             }
         }
