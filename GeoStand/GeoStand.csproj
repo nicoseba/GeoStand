@@ -82,6 +82,7 @@
     <Compile Include="Class\Message.cs" />
     <Compile Include="Class\Status.cs" />
     <Compile Include="Controller\LoginController.cs" />
+    <Compile Include="Controller\RoleController.cs" />
     <Compile Include="Controller\SearchController.cs" />
     <Compile Include="Controller\SigninController.cs" />
     <Compile Include="home.aspx.cs">
@@ -110,7 +111,7 @@
     </Compile>
     <Compile Include="Search.aspx.designer.cs">
       <DependentUpon>Search.aspx</DependentUpon>
-    </Compile>		
+    </Compile>
     <Compile Include="signin.aspx.cs">
       <DependentUpon>signin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
