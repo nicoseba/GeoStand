@@ -44,5 +44,10 @@ namespace GeoStand
 
             }
         }
+
+        protected void Return_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("home.aspx");
+        }
     }
 }
