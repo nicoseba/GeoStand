@@ -69,11 +69,14 @@
   <ItemGroup>
     <Content Include="home.aspx" />
     <Content Include="login.aspx" />
-    <Content Include="Search.aspx" />
+
+
+    <Content Include="signin.aspx" />
+
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class\Admin.cs" />
+    <Compile Include="Class\Role.cs" />
     <Compile Include="Class\Chat.cs" />
     <Compile Include="Class\ChatHasUser.cs" />
     <Compile Include="Class\Comment.cs" />
@@ -81,7 +84,11 @@
     <Compile Include="Class\Message.cs" />
     <Compile Include="Class\Status.cs" />
     <Compile Include="Controller\LoginController.cs" />
+
     <Compile Include="Controller\SearchController.cs" />
+
+    <Compile Include="Controller\SigninController.cs" />
+
     <Compile Include="home.aspx.cs">
       <DependentUpon>home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -101,13 +108,19 @@
     <Compile Include="Class\Publication.cs" />
     <Compile Include="Class\User.cs" />
     <Compile Include="Controller\UserController.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" 
     <Compile Include="Search.aspx.cs">
       <DependentUpon>Search.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Search.aspx.designer.cs">
       <DependentUpon>Search.aspx</DependentUpon>
+    <Compile Include="signin.aspx.cs">
+      <DependentUpon>signin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="signin.aspx.designer.cs">
+      <DependentUpon>signin.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -119,7 +132,6 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

@@ -13,17 +13,17 @@ namespace GeoStand.Controller
         /*
          *Crea paciente y lo agrega al registro 
          */
-        public static bool addUser(int _id, string username, string name, string pass, string mail)
+        public static User addUser(string username, string name, string pass, string mail)
         {
             try
             {
-                User u = new User(_id, username, name, pass, mail);
+                User u = new User( username, name, pass, mail, Role.USER_ROLE);
                 listUser.Add(u);
-                return true;
+                return u;
             }
             catch
             {
-                return false;
+                return null;
 
             }
         }
@@ -50,8 +50,10 @@ namespace GeoStand.Controller
         {
             if (listUser.Count == 0)
             {
-                listUser.Add(new User(101,"username1","Usuario1","123456","correo1@uwu.cl"));
-                listUser.Add(new User(102, "username2", "Usuario2", "123456", "correo2@uwu.cl"));
+                listUser.Add(new User("username1","Usuario1","123456","correo1@uwu.cl",Role.ADMIN_ROLE));
+                listUser.Add(new User("username2", "Usuario2", "123456", "correo2@uwu.cl", Role.USER_ROLE));
+                listUser.Add(new User("username3", "Usuario3", "123456", "correo3@uwu.cl", Role.ADMIN_ROLE));
+                listUser.Add(new User("username4", "Usuario4", "123456", "correo4@uwu.cl", Role.USER_ROLE));
             }
         }
 
