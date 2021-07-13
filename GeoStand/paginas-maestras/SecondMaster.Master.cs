@@ -13,5 +13,10 @@ namespace GeoStand.paginas_maestras
         {
 
         }
+
+        protected void LnkPublication_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("busquedaPublicaciones.aspx");
+        }
     }
 }

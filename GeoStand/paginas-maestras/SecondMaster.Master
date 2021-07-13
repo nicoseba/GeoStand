@@ -20,8 +20,8 @@
                     <h1>GeoStand</h1>
                 </div>
                 <div id="section" class="sections">
-                    <asp:LinkButton cssClass="lnk-section" CausesValidation="false" Text="Publicaciones" runat="server" />
-                    <asp:LinkButton cssClass="lnk-section" CausesValidation="false" Text="Productos" runat="server" />
+                    <asp:LinkButton cssClass="lnk-section" ID="LnkPublication"  CausesValidation="false" Text="Publicaciones" runat="server" OnClick="LnkPublication_Click" />
+                    <asp:LinkButton cssClass="lnk-section" ID="Lnk"  CausesValidation="false" Text="Productos" runat="server" />
                 </div>
             </div>
         </div>
