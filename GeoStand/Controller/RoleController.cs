@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using GeoStand.Class;
+using GeoStand.@class;
 
-namespace GeoStand.Controller
+namespace GeoStand.controller
 {
     public class RoleController
     {

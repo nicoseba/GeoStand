@@ -1,0 +1,35 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SecondMaster.master.cs" Inherits="GeoStand.paginas_maestras.SecondMaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="header" class="header">
+            <div id="contentHeader" class="contentHeader">
+                <div id="logo" class="logo">
+                    <img src="../images/escarabajo.svg"/>
+                </div>
+                <div id="title" class="title">
+                    <h1>GeoStand</h1>
+                </div>
+                <div id="section" class="sections">
+                    <asp:LinkButton cssClass="lnk-section" CausesValidation="false" Text="Publicaciones" runat="server" />
+                    <asp:LinkButton cssClass="lnk-section" CausesValidation="false" Text="Productos" runat="server" />
+                </div>
+            </div>
+        </div>
+
+        <div class="main-div">
+            <asp:ContentPlaceHolder ID="CphContent" runat="server" >
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

@@ -4,42 +4,40 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Web.UI.HtmlControls;
 using GeoStand.@class;
 using GeoStand.controller;
 
-namespace GeoStand.@class
+namespace GeoStand.views
 {
     public partial class login : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //Precargamos usuarios
-            UserController.fillUser();
-
-            if (Session["Error"]!= null) 
-            {
-                LblMessage.Text = Session["Error"].ToString();
-                Session["Error"] = null;
-            }
-
             if (Session["User"] != null)
-                {
-                Response.Redirect("home.aspx");
+            {
+                Response.Redirect("index.aspx");
             }
         }
 
         protected void BtnLogin_Click(object sender, EventArgs e)
         {
-            User u = LoginController.login(TxtUser.Text,TxtPass.Text);
+            User u = LoginController.login(TxtUsername.Text, TxtPass.Text);
             if (u != null)
             {
                 Session["User"] = u;
-                Response.Redirect("home.aspx");
+                Response.Redirect("index.aspx");
             }
             else
             {
+                LblMessage.Visible = true;
                 LblMessage.Text = "Credenciuales de acceso incorrectas.";
             }
+        }
+
+        protected void LnkSignin_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("signin.aspx");
         }
     }
 }

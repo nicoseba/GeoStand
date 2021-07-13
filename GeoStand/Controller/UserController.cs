@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using GeoStand.Class;
+using GeoStand.@class;
 
-namespace GeoStand.Controller
+namespace GeoStand.controller
 {
     public class UserController
     {
@@ -75,7 +75,7 @@ namespace GeoStand.Controller
         {
             if (listUser.Count == 0)
             {
-                listUser.Add(new User("username1","Usuario1","123456","correo1@uwu.cl",Role.ADMIN_ROLE));
+                listUser.Add(new User("username1","Usuario1","123456","correo1@uwu.cl", Role.ADMIN_ROLE));
                 listUser.Add(new User("username2", "Usuario2", "123456", "correo2@uwu.cl", Role.USER_ROLE));
                 listUser.Add(new User("username3", "Usuario3", "123456", "correo3@uwu.cl", Role.ADMIN_ROLE));
                 listUser.Add(new User("username4", "Usuario4", "123456", "correo4@uwu.cl", Role.USER_ROLE));

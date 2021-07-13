@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using GeoStand.Class;
+using GeoStand.@class;
 
-namespace GeoStand.Controller
+namespace GeoStand.controller
 {
     public class SigninController
     {
@@ -15,6 +15,7 @@ namespace GeoStand.Controller
                 if (u.Username.Equals(username))
                 {
                     return "Nombre de usuario ya en uso.";
+
                 }else if (u.Mail.Equals(mail))
                 {
                     return "Correo electronico ya en uso.";

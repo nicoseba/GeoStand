@@ -67,24 +67,33 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Themes\Tema1\styles.css" />
     <Content Include="home.aspx" />
+    <Content Include="images\escarabajo.svg" />
+    <Content Include="images\loading1.gif" />
     <Content Include="login.aspx" />
     <Content Include="signin.aspx" />
     <Content Include="Search.aspx" />
+    <Content Include="views\busquedaPublicaciones.aspx" />
+    <Content Include="views\login.aspx" />
+    <Content Include="views\signin.aspx" />
     <Content Include="Web.config" />
+    <Content Include="views\index.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class\Role.cs" />
-    <Compile Include="Class\Chat.cs" />
-    <Compile Include="Class\ChatHasUser.cs" />
-    <Compile Include="Class\Comment.cs" />
-    <Compile Include="Class\ExchangeMode.cs" />
-    <Compile Include="Class\Message.cs" />
-    <Compile Include="Class\Status.cs" />
-    <Compile Include="Controller\LoginController.cs" />
-    <Compile Include="Controller\RoleController.cs" />
-    <Compile Include="Controller\SearchController.cs" />
-    <Compile Include="Controller\SigninController.cs" />
+    <Compile Include="class\Role.cs" />
+    <Compile Include="class\Chat.cs" />
+    <Compile Include="class\ChatHasUser.cs" />
+    <Compile Include="class\Comment.cs" />
+    <Compile Include="class\ExchangeMode.cs" />
+    <Compile Include="class\Message.cs" />
+    <Compile Include="class\Status.cs" />
+    <Compile Include="controller\LoginController.cs" />
+    <Compile Include="controller\MultimediaController.cs" />
+    <Compile Include="controller\PublicationController.cs" />
+    <Compile Include="controller\RoleController.cs" />
+    <Compile Include="controller\SearchController.cs" />
+    <Compile Include="controller\SigninController.cs" />
     <Compile Include="home.aspx.cs">
       <DependentUpon>home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -99,11 +108,18 @@
     <Compile Include="login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Class\Multimedia.cs" />
-    <Compile Include="Class\Product.cs" />
-    <Compile Include="Class\Publication.cs" />
-    <Compile Include="Class\User.cs" />
-    <Compile Include="Controller\UserController.cs" />
+    <Compile Include="class\Multimedia.cs" />
+    <Compile Include="class\Product.cs" />
+    <Compile Include="class\Publication.cs" />
+    <Compile Include="class\User.cs" />
+    <Compile Include="controller\UserController.cs" />
+    <Compile Include="paginas-maestras\SecondMaster.Master.cs">
+      <DependentUpon>SecondMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paginas-maestras\SecondMaster.Master.designer.cs">
+      <DependentUpon>SecondMaster.Master</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Search.aspx.cs">
       <DependentUpon>Search.aspx</DependentUpon>
@@ -119,9 +135,46 @@
     <Compile Include="signin.aspx.designer.cs">
       <DependentUpon>signin.aspx</DependentUpon>
     </Compile>
+    <Compile Include="paginas-maestras\home.Master.cs">
+      <DependentUpon>home.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paginas-maestras\home.Master.designer.cs">
+      <DependentUpon>home.Master</DependentUpon>
+    </Compile>
+    <Compile Include="views\busquedaPublicaciones.aspx.cs">
+      <DependentUpon>busquedaPublicaciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\busquedaPublicaciones.aspx.designer.cs">
+      <DependentUpon>busquedaPublicaciones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\signin.aspx.cs">
+      <DependentUpon>signin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\signin.aspx.designer.cs">
+      <DependentUpon>signin.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <Content Include="paginas-maestras\home.Master" />
+    <Content Include="paginas-maestras\SecondMaster.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

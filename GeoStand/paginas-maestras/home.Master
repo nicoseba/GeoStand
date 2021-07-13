@@ -1,0 +1,43 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="home.Master.cs" Inherits="GeoStand.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="header" class="header" runat="server">
+            <div id="contentHeader" class="contentHeader" runat="server">
+                <div id="logo" class="logo" runat="server">
+                    <img src="../images/escarabajo.svg" runat="server"/>
+                </div>
+                <div  id="title" class="title" runat="server">
+                    <h1>GeoStand</h1>
+                </div>
+                <div id="section" class="sections" runat="server">
+                    <asp:LinkButton cssClass="lnk-section" Text="Publicaciones" runat="server" ID="LnkPublication" OnClick="LnkPublication_Click" CausesValidation="false"/>
+                    <asp:LinkButton cssClass="lnk-section" Text="Productos" runat="server" ID="LnProduct" CausesValidation="false"/>
+                </div>
+                <div id="linksDiv" class="links" runat="server" >
+                    <asp:LinkButton ID="LnkLogin" runat="server" CssClass="btn-login btn" OnClick="LnkLogin_Click" Text="Ingresar" CausesValidation="false"></asp:LinkButton>
+                    <asp:LinkButton ID="LnkSignin" runat="server" CssClass="btn-signin btn" OnClick="LnkSignin_Click" Text="Registrarse" CausesValidation="false"></asp:LinkButton>
+                </div>
+                <div id="sessionDiv" class="session" runat="server" >
+                    <asp:Label ID="LblSession" Text="" runat="server" CssClass="lbl-session" CausesValidation="false"/>
+                    <asp:LinkButton ID="LnkSession" runat="server" CssClass="btn btn-session" OnClick="LnkSession_Click" Text="Cerrar Sesión" CausesValidation="false"></asp:LinkButton>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-div" runat="server">
+            <asp:ContentPlaceHolder ID="CphContent" runat="server" >
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

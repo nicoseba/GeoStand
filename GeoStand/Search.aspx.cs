@@ -1,5 +1,5 @@
-﻿using GeoStand.Class;
-using GeoStand.Controller;
+﻿using GeoStand.@class;
+using GeoStand.controller;
 using System;
 using System.Drawing;
 using System.Web.UI.WebControls;
