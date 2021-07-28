@@ -138,7 +138,7 @@ namespace GeoStand
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblSession;
+        protected global::System.Web.UI.WebControls.LinkButton LblSession;
 
         /// <summary>
         /// Control LnkSession.

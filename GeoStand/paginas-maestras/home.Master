@@ -4,8 +4,9 @@
 
 <html>
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
+    <script src="https://kit.fontawesome.com/ea72d16336.js" crossorigin="anonymous"></script>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -14,30 +15,32 @@
         <div id="header" class="header" runat="server">
             <div id="contentHeader" class="contentHeader" runat="server">
                 <div id="logo" class="logo" runat="server">
-                    <img src="../images/escarabajo.svg" runat="server"/>
+                    <img src="../images/escarabajo.svg" runat="server" />
                 </div>
-                <div  id="title" class="title" runat="server">
+                <div id="title" class="title" runat="server">
                     <h1>GeoStand</h1>
                 </div>
                 <div id="section" class="sections" runat="server">
-                    <asp:LinkButton cssClass="lnk-section" Text="Publicaciones" runat="server" ID="LnkPublication" OnClick="LnkPublication_Click" CausesValidation="false"/>
-                    <asp:LinkButton cssClass="lnk-section" Text="Productos" runat="server" ID="LnProduct" CausesValidation="false"/>
+                    <asp:LinkButton CssClass="lnk-section" Text="Publicaciones" runat="server" ID="LnkPublication" OnClick="LnkPublication_Click" CausesValidation="false" />
+                    <asp:LinkButton CssClass="lnk-section" Text="Productos" runat="server" ID="LnProduct" CausesValidation="false" />
                 </div>
-                <div id="linksDiv" class="links" runat="server" >
-                    <asp:LinkButton ID="LnkLogin" runat="server" CssClass="btn-login btn" OnClick="LnkLogin_Click" Text="Ingresar" CausesValidation="false"></asp:LinkButton>
+                <div id="linksDiv" class="links" runat="server">
+                    <asp:LinkButton ID="LnkLogin" runat="server" CssClass="btn-login btn" OnClick="LnkLogin_Click" Text="Ingresar <i class='fas fa-sign-in-alt'></i>" CausesValidation="false"></asp:LinkButton>
                     <asp:LinkButton ID="LnkSignin" runat="server" CssClass="btn-signin btn" OnClick="LnkSignin_Click" Text="Registrarse" CausesValidation="false"></asp:LinkButton>
                 </div>
-                <div id="sessionDiv" class="session" runat="server" >
-                    <asp:Label ID="LblSession" Text="" runat="server" CssClass="lbl-session" CausesValidation="false"/>
-                    <asp:LinkButton ID="LnkSession" runat="server" CssClass="btn btn-session" OnClick="LnkSession_Click" Text="Cerrar Sesión" CausesValidation="false"></asp:LinkButton>
+                <div id="sessionDiv" class="session" runat="server">
+                    <asp:LinkButton ID="LblSession" runat="server" CssClass="btn btn-login" CausesValidation="false" OnClick="LblSession_Click" />
+                    <asp:LinkButton ID="LnkSession" runat="server" CssClass="btn btn-session" OnClick="LnkSession_Click" Text="Cerrar Sesión <i class='fas fa-sign-out-alt'></i>" CausesValidation="false"></asp:LinkButton>
                 </div>
             </div>
         </div>
 
-        <div class="main-div" runat="server">
-            <asp:ContentPlaceHolder ID="CphContent" runat="server" >
+
+        <div class="main-div2" runat="server">
+            <asp:ContentPlaceHolder ID="CphContent" runat="server">
             </asp:ContentPlaceHolder>
         </div>
+    
     </form>
 </body>
 </html>

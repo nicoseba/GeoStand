@@ -1,4 +1,4 @@
-﻿using GeoStand.@class;
+﻿using GeoStand.Modelo;
 using GeoStand.controller;
 using System;
 
@@ -6,24 +6,55 @@ namespace GeoStand.views
 {
     public partial class busquedaPublicaciones : System.Web.UI.Page
     {
+        private Publication p;
+
+
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            string pubId = Request.QueryString["pid"];
+            if (!String.IsNullOrEmpty(pubId))
+            {
+                int pid = int.Parse(pubId);
+                showPublication(pid);
+            }
         }
+
 
         protected void BtnSearchPublication_Click(object sender, EventArgs e)
         {
             string idPublication = TxtIdSearch.Text;
-            Publication p = PublicationController.findPublicatiotion(int.Parse(idPublication));
+            showPublication(int.Parse(idPublication));
+            
+        }
+
+        private bool SessionCheck()
+        {
+            if (Session["User"] != null)
+            {
+                User u = (User) Session["User"];
+                Publication p = PublicationController.findPublicatiotion(int.Parse(HdnIDPublication.Value));
+                if ((p.User.id == u.id) || (u.Role.id == 2))
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        private void showPublication(int pid)
+        {
+            p = PublicationController.findPublicatiotion(pid);
             System.Threading.Thread.Sleep(1500);
             if (p != null)
             {
-                HdnIDPublication.Value = p.Id.ToString();
-                TitlePublication.Text = p.Title;
-                UserPublication.Text = p.User.Name;
-                ImgPublication.ImageUrl = p.Multimedia.Url;
-                ContentPublication.Text = p.Content;
                 PublicationView.Visible = true;
+                HdnIDPublication.Value = p.id.ToString();
+                TitlePublication.Text = p.title;
+                UserPublication.Text = p.User.name;
+                HdnUser.Value = p.user_id.ToString();
+                ImgPublication.ImageUrl = p.Multimedia.url;
+                ContentPublication.Text = p.content;
                 PanelMsg.Visible = false;
                 BtnEditPublication.Visible = SessionCheck();
 
@@ -36,21 +67,6 @@ namespace GeoStand.views
             }
         }
 
-        private bool SessionCheck()
-        {
-            if (Session["User"] != null)
-            {
-                User u = (User)Session["User"];
-                Publication p = PublicationController.findPublicatiotion(int.Parse(HdnIDPublication.Value));
-                if ((p.User.Id == u.Id) || (u.Id == Role.ADMIN_ROLE))
-                {
-                    return true;
-                }
-            }
-
-            return false;
-        }
-
         protected void BtnEditPublication_Click(object sender, EventArgs e)
         {
             System.Threading.Thread.Sleep(1500);
@@ -58,10 +74,10 @@ namespace GeoStand.views
             PublicationView.Visible = false;
             PublicationSearch.Visible = false;
             PublicationEdit.Visible = true;
-            HdnPublicationEdit.Value = p.Id.ToString();
-            TxtTitle.Text = p.Title;
-            TxtContent.Text = p.Content;
-            TxtUrl.Text = p.Multimedia.Url;
+            HdnPublicationEdit.Value = p.id.ToString();
+            TxtTitle.Text = p.title;
+            TxtContent.Text = p.content;
+            TxtUrl.Text = p.Multimedia.url;
 
 
         }
@@ -71,12 +87,17 @@ namespace GeoStand.views
             System.Threading.Thread.Sleep(1500);
             User u = (User)Session["User"];
             PanelMsg.Visible = true;
-            LblMsg.Text = PublicationController.editPublication(int.Parse(HdnPublicationEdit.Value), TxtTitle.Text, TxtContent.Text, TxtUrl.Text, u);
+            LblMsg.Text = PublicationController.editPublication(int.Parse(HdnPublicationEdit.Value), TxtTitle.Text, TxtContent.Text, TxtUrl.Text, u.id);
             PublicationSearch.Visible = true;
             PublicationView.Visible = true;
             PublicationEdit.Visible = false;
             TxtIdSearch.Text = HdnPublicationEdit.Value;
             BtnSearchPublication_Click(sender, e);
+        }
+
+        protected void UserPublication1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("users.aspx?uid="+HdnUser.Value);
         }
     }
 }

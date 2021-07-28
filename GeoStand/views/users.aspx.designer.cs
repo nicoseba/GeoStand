@@ -7,137 +7,146 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace GeoStand
+namespace GeoStand.views
 {
 
 
-    public partial class Search
+    public partial class users
     {
 
         /// <summary>
-        /// Control form1.
+        /// Control ScriptManager1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.ScriptManager ScriptManager1;
 
         /// <summary>
-        /// Control TxtSrc.
+        /// Control UpgratePanelUser.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtSrc;
+        protected global::System.Web.UI.UpdatePanel UpgratePanelUser;
 
         /// <summary>
-        /// Control SrcButton.
+        /// Control PanelUser.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button SrcButton;
+        protected global::System.Web.UI.WebControls.Panel PanelUser;
 
         /// <summary>
-        /// Control Lbmsj.
+        /// Control LiteralNombre.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Lbmsj;
+        protected global::System.Web.UI.WebControls.Literal LiteralNombre;
 
         /// <summary>
-        /// Control Panel1.
+        /// Control LabelsLinks.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel Panel1;
+        protected global::System.Web.UI.WebControls.Panel LabelsLinks;
 
         /// <summary>
-        /// Control HdnId.
+        /// Control LnkPublication.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField HdnId;
+        protected global::System.Web.UI.WebControls.LinkButton LnkPublication;
 
         /// <summary>
-        /// Control LbUsername.
+        /// Control LnkProducts.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LbUsername;
+        protected global::System.Web.UI.WebControls.LinkButton LnkProducts;
 
         /// <summary>
-        /// Control TxUser.
+        /// Control PanelPublication.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxUser;
+        protected global::System.Web.UI.WebControls.Panel PanelPublication;
 
         /// <summary>
-        /// Control TxEmail.
+        /// Control PublicationList.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxEmail;
+        protected global::System.Web.UI.WebControls.Literal PublicationList;
 
         /// <summary>
-        /// Control DropRole.
+        /// Control PanelProduct.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropRole;
+        protected global::System.Web.UI.WebControls.Panel PanelProduct;
 
         /// <summary>
-        /// Control LnkEditar.
+        /// Control ProductList.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LnkEditar;
+        protected global::System.Web.UI.WebControls.Literal ProductList;
 
         /// <summary>
-        /// Control BtnModificar.
+        /// Control PanelLnkEdit.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnModificar;
+        protected global::System.Web.UI.WebControls.Panel PanelLnkEdit;
 
         /// <summary>
-        /// Control LbMsj2.
+        /// Control EditPerfil.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LbMsj2;
+        protected global::System.Web.UI.WebControls.LinkButton EditPerfil;
 
         /// <summary>
-        /// Control Back.
+        /// Control PanelError.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton Back;
+        protected global::System.Web.UI.WebControls.Panel PanelError;
+
+        /// <summary>
+        /// Control LnkHome.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton LnkHome;
     }
 }

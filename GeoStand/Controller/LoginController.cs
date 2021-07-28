@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using GeoStand.@class;
+using GeoStand.Modelo;
+using GeoStand.Helpers;
 
 namespace GeoStand.controller
 {
@@ -10,17 +11,10 @@ namespace GeoStand.controller
     {
         public static User login(string username, string pass)
         {
-            foreach (User u in UserController.getAll())
-            {
-                if (u.Username.Equals(username))
-                {
-                    if (u.Pass.Equals(pass))
-                    {
-                        return u;
-                    }
-                }
-            }
-            return null;
+            User u = UserController.findByUsername(username);
+
+            return (u != null && u.pass.Equals(Encrypt.GetSHA256(pass))) ? u : null;
+
         }
 
     }

@@ -1,4 +1,4 @@
-﻿using GeoStand.@class;
+﻿using GeoStand.Modelo;
 using GeoStand.controller;
 using System;
 using System.Collections.Generic;
@@ -13,7 +13,6 @@ namespace GeoStand.views
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            UserController.fillUser();
             if (Session["Message"] != null)
             {
                 LblMessage.Text = Session["Message"].ToString();
@@ -43,7 +42,8 @@ namespace GeoStand.views
                 {
                     Session["User"] = u;
                 }
-                Response.Redirect("login.aspx");
+
+                Response.Redirect("index.aspx");
             }
             else
             {

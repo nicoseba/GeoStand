@@ -2,6 +2,12 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
+        .wrap {
+            width: 75%;
+            max-width: 1250px;
+            margin: 0px auto;
+        }
+
         .loading {
             position: fixed;
             top: 0px;
@@ -32,7 +38,7 @@
 </asp:Content>
 <asp:Content ID="CphContent" ContentPlaceHolderID="CphContent" runat="server">
 
-    <div class="body-publication" runat="server">
+    <div class="wrapp" runat="server">
         <asp:ScriptManager ID="ScrMng1" runat="server"></asp:ScriptManager>
         <asp:UpdatePanel ID="UpdPanel1" runat="server">
             <ContentTemplate>
@@ -65,8 +71,9 @@
                                 <p>
                                     Escrito por
                                     <asp:Label Text="" runat="server" ID="UserPublication" />
+                                    <asp:LinkButton ID="UserPublication1" runat="server" OnClick="UserPublication1_Click" CausesValidation="false">Ver Perfil</asp:LinkButton>
                                 </p>
-
+                                <asp:HiddenField ID="HdnUser" runat="server" />
                             </td>
                         </tr>
                         <tr>
@@ -101,8 +108,8 @@
                     <table style="width: 100%">
                         <tr>
                             <td style="width: 15%">Titulo:</td>
-                            <td style="width: 60%">
-                                <asp:TextBox ID="TxtTitle" runat="server" Width="80%" />
+                            <td style="width: 40%">
+                                <asp:TextBox ID="TxtTitle" runat="server" Width="100%" />
                                 <asp:HiddenField ID="HdnPublicationEdit" runat="server" />
                             </td>
                             <td style="width: 25%">

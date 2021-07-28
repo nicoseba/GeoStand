@@ -2,25 +2,27 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using GeoStand.@class;
+using GeoStand.Modelo;
 
 namespace GeoStand.controller
 {
     public class MultimediaController
     {
-        private static List<Multimedia> listMultimedia= new List<Multimedia>();
-        public static Multimedia addMultimedia(int id_, string url_)
+        private static GeoStandEntities dbc = new GeoStandEntities();
+        
+        public static Multimedia addMultimedia( string url_ )
         {
             try
             {
                 Multimedia m = new Multimedia()
-                {
-                    Id = id_,
-                    Url = url_
+                { 
+                    url = url_
                 };
 
-                listMultimedia.Add(m);
-                return m;
+                dbc.Multimedia.Add(m);
+                dbc.SaveChanges();
+
+                return dbc.Multimedia.SingleOrDefault( mul => mul.url.Equals(url_));
                 
             }
             catch 
@@ -31,39 +33,19 @@ namespace GeoStand.controller
         }
         public static Multimedia findMultimedia(int id_)
         {
-            foreach ( Multimedia m in listMultimedia)
-            {
-                if (m.Id == id_)
-                {
-                    return m;
-                }
-            }
-            return null;
+            return dbc.Multimedia.Find(id_);
         }
 
         public static Multimedia editMultimedia(int id_, string url_)
         {
-            Multimedia m = findMultimedia(id_);
+            
+            Multimedia m = dbc.Multimedia.Find(id_);
             if (m!=null)
             {
-                m.Url = url_;
-                return m;
+                m.url = url_;
             }
-            else
-            {
-                return m;
-            }
-        }
-
-        public static void fillMultimedia()
-        {
-            if (listMultimedia.Count == 0)
-            {
-                listMultimedia.Add(new Multimedia(1, "http://lorempixel.com/450/450/nature/"));
-                listMultimedia.Add(new Multimedia(2, "http://lorempixel.com/450/450/nightlife/"));
-                listMultimedia.Add(new Multimedia(3, "http://lorempixel.com/450/450/cats/"));
-
-            }
+            dbc.SaveChanges();
+            return m;
         }
     }
 }

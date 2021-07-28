@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="86309661adc94d71b65be03673095f9a" Name="Diagram1" ZoomLevel="100">
+        <EntityTypeShape EntityType="GeoStandModel.Chat" Width="1.5" PointX="2.25" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeoStandModel.Comment" Width="1.5" PointX="7.375" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeoStandModel.ExchangeMode" Width="1.5" PointX="8.5" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeoStandModel.Message" Width="1.5" PointX="1.5" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeoStandModel.Multimedia" Width="1.5" PointX="9.5" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeoStandModel.Product" Width="1.5" PointX="11.875" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeoStandModel.Publication" Width="1.5" PointX="9.125" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeoStandModel.Report" Width="1.5" PointX="14.875" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeoStandModel.ReportType" Width="1.5" PointX="12" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeoStandModel.Role" Width="1.5" PointX="3.25" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeoStandModel.User" Width="1.5" PointX="4.875" PointY="4.75" IsExpanded="true" />
+        <AssociationConnector Association="GeoStandModel.fk_message_chat" ManuallyRouted="false" />
+        <AssociationConnector Association="GeoStandModel.fk_comment_publication" ManuallyRouted="false" />
+        <AssociationConnector Association="GeoStandModel.fk_comment_user" ManuallyRouted="false" />
+        <AssociationConnector Association="GeoStandModel.fk_report_reported_comment" ManuallyRouted="false" />
+        <AssociationConnector Association="GeoStandModel.fk_product_exchangemode" ManuallyRouted="false" />
+        <AssociationConnector Association="GeoStandModel.fk_message_multimedia" ManuallyRouted="false" />
+        <AssociationConnector Association="GeoStandModel.fk_message_user" ManuallyRouted="false" />
+        <AssociationConnector Association="GeoStandModel.fk_product_multimedia" ManuallyRouted="false" />
+        <AssociationConnector Association="GeoStandModel.fk_publication_multimedia" ManuallyRouted="false" />
+        <AssociationConnector Association="GeoStandModel.fk_product_user" ManuallyRouted="false" />
+        <AssociationConnector Association="GeoStandModel.fk_report_reported_product" ManuallyRouted="false" />
+        <AssociationConnector Association="GeoStandModel.fk_publication_user" ManuallyRouted="false" />
+        <AssociationConnector Association="GeoStandModel.fk_report_reported_publication" ManuallyRouted="false" />
+        <AssociationConnector Association="GeoStandModel.fk_report_reported_user" ManuallyRouted="false" />
+        <AssociationConnector Association="GeoStandModel.fk_report_reporting_user" ManuallyRouted="false" />
+        <AssociationConnector Association="GeoStandModel.fk_report_role" ManuallyRouted="false" />
+        <AssociationConnector Association="GeoStandModel.fk_report_type" ManuallyRouted="false" />
+        <AssociationConnector Association="GeoStandModel.fk_user_role" ManuallyRouted="false" />
+        <AssociationConnector Association="GeoStandModel.ChatUser" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

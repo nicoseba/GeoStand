@@ -3,7 +3,7 @@
 </asp:Content>
 <asp:Content ID="CphContent" ContentPlaceHolderID="CphContent" runat="server">
     <div class="main">
-        <asp:Panel runat="server" CssClass="main-center">
+        <asp:Panel runat="server" CssClass="body-publication">
             <h2>Usando pagina maestra</h2>
 
         </asp:Panel>

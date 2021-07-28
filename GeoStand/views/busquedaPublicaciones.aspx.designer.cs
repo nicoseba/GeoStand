@@ -114,6 +114,24 @@ namespace GeoStand.views
         protected global::System.Web.UI.WebControls.Label UserPublication;
 
         /// <summary>
+        /// Control UserPublication1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton UserPublication1;
+
+        /// <summary>
+        /// Control HdnUser.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField HdnUser;
+
+        /// <summary>
         /// Control ImgPublication.
         /// </summary>
         /// <remarks>
