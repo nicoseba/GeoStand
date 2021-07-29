@@ -98,7 +98,7 @@ namespace GeoStand.views
             }
             else
             {
-                return "<li> El Usuario publicado ningun producto </li>";
+                return "<li> El Usuario no ha publicado ningun producto </li>";
             }
         }
 
